@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests" parallel="classes" thread-count="1" data-provider-thread-count="1" verbose="10">
+<listeners>
+   <listener class-name="listeners.RetryTestListener"></listener>
+   <listener class-name="listeners.AllureListener"></listener>
+</listeners>
+<suite-files>
+<suite-file path="testng_Derrow_Dermatology.xml" />
+</suite-files>
+</suite>

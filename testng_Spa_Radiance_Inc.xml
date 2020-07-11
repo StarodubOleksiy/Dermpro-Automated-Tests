@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests" parallel="classes" thread-count="1" data-provider-thread-count="1" verbose="10">
+<listeners>
+   <listener class-name="listeners.RetryTestListener"></listener>
+   <listener class-name="listeners.AllureListener"></listener>
+</listeners>
+<parameter name="browserUrl" value="https://store.sparadiance.com"/>
+<parameter name="fileNameSuffix" value="Spa_Radiance_Inc"/>
+<test name="DermPro tests">
+<groups>
+<run>
+<exclude name="SO-29"/>
+<exclude name="SO-32A"/>
+<exclude name="SO-36A"/>
+<exclude name="SO-37A"/>
+<exclude name="SO-46A"/>
+<exclude name="SO-49B"/>
+<exclude name="SO-101"/>
+<exclude name="SO-105A"/>
+<exclude name="testenv"/>
+</run>
+</groups>
+<classes>
+<class name="tests.smoke.SmokeTest" />
+<class name="tests.SignInTest" />
+<class name="tests.SignUpTest" />
+<class name="tests.HomeTest" />
+<class name="tests.MenuTest" />
+<class name="tests.AddressBookTest" />
+<class name="tests.signeduser.SignedInContactUsTest" />
+<class name="tests.signeduser.SignedInFooterTest" />
+<class name="tests.SubscribeTest" />
+<class name="tests.SearchTest" />
+<class name="tests.SearchTermsTest" />
+<class name="tests.AccountDashboardTest" />
+<class name="tests.MyStoredPaymentAccountsTest" />
+<class name="tests.signeduser.SignedInMyRewardTest" />
+<class name="tests.MyGiftCardsTest" />
+<class name="tests.NewsletterSubscriptionsTest" />
+<class name="tests.GiftCardTest" />
+<class name="tests.MembershipTest" />
+<class name="tests.signeduser.SignedInCartPopUpTest" />
+<class name="tests.signeduser.SignedInShoppingCartTest"/>
+<class name="tests.ShoppingOptionsTest" />
+<class name="tests.signeduser.SignedInCompareProductsTest" />
+<class name="tests.signeduser.SignedInWishListTest" />
+<class name="tests.signeduser.SignedInReviewTest" />
+<class name="tests.signeduser.SignedInMenuPageWithProductsTest" />
+<class name="tests.ProductDetailsTest" />
+<class name="tests.MyOrdersTest" />
+<class name="tests.signeduser.SignedInCheckoutTest" />
+<class name="tests.CheckoutTest" />
+<class name="tests.AdvancedSearchTest" />
+<class name="tests.AccountInformationTest" />
+</classes>
+</test>
+</suite>

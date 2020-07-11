@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests" parallel="classes" thread-count="1" data-provider-thread-count="1" verbose="10">
+<listeners>
+   <listener class-name="listeners.RetryTestListener"></listener>
+   <listener class-name="listeners.AllureListener"></listener>
+</listeners>
+<parameter name="browserUrl" value="https://store.sparadiance.com"/>
+<parameter name="fileNameSuffix" value="Spa_Radiance_Inc"/>
+<test name="DermPro tests">
+<groups>
+<run>
+<exclude name="SO-29"/>
+<exclude name="SO-32A"/>
+<exclude name="SO-36A"/>
+<exclude name="SO-37A"/>
+<exclude name="SO-46A"/>
+<exclude name="SO-49B"/>
+<exclude name="SO-101"/>
+<exclude name="SO-105A"/>
+<exclude name="testenv"/>
+</run>
+</groups>
+<classes>
+<class name="tests.smoke.SmokeTest" />
+</classes>
+</test>
+</suite>
